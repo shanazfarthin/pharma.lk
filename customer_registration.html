@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Customer Registration</title>
+<style>
+    body { font-family: Arial; }
+	form { width: 400px; margin: auto; }
+    input, select, textarea { width: 100%; padding: 8px; margin: 5px 0; }	
+</style>
+
+</head>
+<body>
+
+<h2 align="center">Customer Registration</h2>
+
+<form action="insert_customer.php" method="POST" onsubmit="return validateForm()">
+
+    <label>Customer ID</label>
+    <input type="text" name="cus_id" required>
+
+    <label>First Name</label>
+    <input type="text" name="f_name" required>
+
+    <label>Middle Name</label>
+    <input type="text" name="m_name">
+
+    <label>Surname</label>
+    <input type="text" name="s_name" required>
+
+    <label>Customer Full Name</label>
+    <input type="text" name="fl_name" required>
+
+    <label>Gender</label>
+    <select name="gender" required>
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+
+    <label>Birth Day</label>
+    <input type="date" name="DOB" required>
+
+    <label>Age</label>
+    <input type="number" name="age" required>
+
+    <label>Address</label>
+    <textarea name="address" required></textarea>
+
+    <label>City</label>
+    <input type="text" name="city" required>
+
+    <label>Contact No</label>
+    <input type="number" name="con_no" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Password</label>
+    <input type="password" name="pass" id="pass" required>
+
+    <label>Re-Enter Password</label>
+    <input type="password" id="repass" required>
+
+    <button type="submit">Register</button>
+
+</form>
+
+<script>
+function validateForm() {
+    let pass = document.getElementById("pass").value;
+    let repass = document.getElementById("repass").value;
+
+    if (pass !== repass) {
+        alert("Passwords do not match!");
+        return false;
+    }
+    return true;
+}
+</script>
+
+</body>
+</html>
