@@ -190,7 +190,7 @@ button{
 <div class="container">
 
 <div class="left">
-<h1>💊 PharmaCare</h1>
+<h1>💊 Drugs4U</h1>
 <p>Customer Registration System</p>
 </div>
 
